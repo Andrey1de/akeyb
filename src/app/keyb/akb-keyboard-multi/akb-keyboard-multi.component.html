@@ -1,0 +1,34 @@
+<p>akb-keyboard-multi works!</p>
+<select [(ngModel)]="GlobalLang">
+    <option  value="en" ><strong>English</strong></option>
+    <option  value="he" ><strong>עברית</strong></option>
+    <option  value="ar" ><strong>اللغة العربية</strong></option>
+    <option  value="ru" ><strong>Русский</strong></option>
+</select>
+<br>
+
+
+
+<!-- 
+
+
+ -->
+
+<div [hidden]="!(GlobalLang =='en')">
+    <akb-lang-keyboard [lang]="'en'"></akb-lang-keyboard>
+    ----------------------ENGLISH -------------------------------------
+</div>
+
+
+<div [hidden]="!(GlobalLang =='ru')">
+    <akb-lang-keyboard [lang]="'ru'"></akb-lang-keyboard>
+    ----------------------RUSSIAN -------------------------------------
+</div>
+<div [hidden]="!(GlobalLang =='ar')">
+    <akb-lang-keyboard [lang]="'ar'"></akb-lang-keyboard>
+    ----------------------{{GlobalLang}}-------------------------------------
+</div>
+<div [hidden]="!( GlobalLang =='he')">
+    <akb-lang-keyboard [lang]="'he'"></akb-lang-keyboard>
+    ----------------------HEBREW -------------------------------------
+</div>
